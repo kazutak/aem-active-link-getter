@@ -14,12 +14,12 @@ javascript: (function () {
           { 
             h = location.href;
             h = h.substr(h.indexOf(tmp) + tmp.length);
-            h = 'https://www.salesforce.com/'+ c + '/' +h + '/' + $("#cq-siteadmin-grid .x-grid3-td-name .x-grid3-col-name")[i-1].innerText;
+            h = 'https://'+location.hostname+'/'+ c + '/' +h + '/' + $("#cq-siteadmin-grid .x-grid3-td-name .x-grid3-col-name")[i-1].innerText;
             $('div#form-debug').append('<a href=' + h + ' style=\'text-decoration: underline solid blue;\' target=\'_blank\'>' +h + '<br />');
           } 
       });
     }
-    $('div#form-debug').append('<br><br><sub>(Kazu v1.0)</sub>');
+    $('div#form-debug').append('<br><br><sub>(Kazu v1.1)</sub>');
   } else {
     $('div#form-debug').remove();
   }
